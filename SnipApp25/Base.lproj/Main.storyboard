@@ -26,7 +26,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <color key="baseBackgroundColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="9FC-ZD-2jI" kind="show" id="dBI-vY-ljI"/>
                                 </connections>
@@ -38,7 +40,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register">
+                                    <color key="baseBackgroundColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -71,29 +75,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB2-tP-dh0">
-                                <rect key="frame" x="70.000000000000014" y="164.66666666666666" width="253.33333333333337" height="25.333333333333343"/>
+                                <rect key="frame" x="70" y="164.66666666666666" width="253" height="25.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <color key="textColor" red="0.34901961679999999" green="0.53725492949999998" blue="0.55294120309999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yST-wj-AhP">
-                                <rect key="frame" x="50" y="274" width="293.33333333333331" height="34"/>
+                                <rect key="frame" x="50" y="274" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-TR-pVv">
-                                <rect key="frame" x="50" y="336" width="293.33333333333331" height="34"/>
+                                <rect key="frame" x="50" y="336" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaV-wF-vU7">
-                                <rect key="frame" x="157.66666666666666" y="429" width="78" height="35"/>
+                                <rect key="frame" x="146.66666666666666" y="429" width="100" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2M6-lg-Xa0"/>
                                 </constraints>
                                 <color key="tintColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit">
+                                    <color key="baseBackgroundColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bcx-jJ-UVK"/>
@@ -102,7 +108,6 @@
                             <constraint firstItem="yST-wj-AhP" firstAttribute="leading" secondItem="oiT-TR-pVv" secondAttribute="leading" id="3nK-8R-RwH"/>
                             <constraint firstItem="oiT-TR-pVv" firstAttribute="centerX" secondItem="BaV-wF-vU7" secondAttribute="centerX" id="51s-aq-Ton"/>
                             <constraint firstItem="bcx-jJ-UVK" firstAttribute="trailing" secondItem="CB2-tP-dh0" secondAttribute="trailing" constant="70" id="6Jj-Pa-W8u"/>
-                            <constraint firstItem="BaV-wF-vU7" firstAttribute="leading" secondItem="bcx-jJ-UVK" secondAttribute="leading" constant="157.66666666666666" id="CI1-fn-yL0"/>
                             <constraint firstItem="CB2-tP-dh0" firstAttribute="leading" secondItem="bcx-jJ-UVK" secondAttribute="leading" constant="70" id="DVZ-bg-7RM"/>
                             <constraint firstItem="BaV-wF-vU7" firstAttribute="top" secondItem="oiT-TR-pVv" secondAttribute="bottom" constant="59" id="KCq-NW-piC"/>
                             <constraint firstItem="CB2-tP-dh0" firstAttribute="top" secondItem="bcx-jJ-UVK" secondAttribute="top" constant="61.666666666666629" id="SlA-aI-Sux"/>
