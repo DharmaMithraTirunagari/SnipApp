@@ -18,7 +18,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snip cutout.tiff" translatesAutoresizingMaskIntoConstraints="NO" id="ogW-1g-TWp">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="538"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-Wr-GNF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-Wr-GNF" customClass="CustomButton" customModule="SnipApp25" customModuleProvider="target">
                                 <rect key="frame" x="41.666666666666657" y="575" width="310" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="egX-UI-zZH"/>
@@ -33,7 +33,7 @@
                                     <segue destination="9FC-ZD-2jI" kind="show" id="dBI-vY-ljI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-0F-mOl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-0F-mOl" customClass="CustomButton" customModule="SnipApp25" customModuleProvider="target">
                                 <rect key="frame" x="41.666666666666657" y="645" width="310" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="0sC-s4-VoD"/>
@@ -73,31 +73,31 @@
             </objects>
             <point key="canvasLocation" x="985" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="llK-OG-por">
             <objects>
-                <viewController id="9FC-ZD-2jI" customClass="ViewController" customModule="SnipApp25" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9FC-ZD-2jI" customClass="LoginViewController" customModule="SnipApp25" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nII-Vh-t34">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB2-tP-dh0">
-                                <rect key="frame" x="20" y="374" width="353" height="32.333333333333314"/>
+                                <rect key="frame" x="20" y="271" width="353" height="32.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="textColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="       Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yST-wj-AhP">
-                                <rect key="frame" x="50" y="490.33333333333331" width="293" height="33.999999999999943"/>
+                                <rect key="frame" x="50" y="387.33333333333331" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gFm-0y-u8Y">
-                                <rect key="frame" x="56.999999999999993" y="498.33333333333331" width="18.666666666666664" height="17.666666666666686"/>
+                                <rect key="frame" x="56.999999999999993" y="395.33333333333331" width="18.666666666666664" height="17.666666666666686"/>
                                 <color key="tintColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="       Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-TR-pVv">
-                                <rect key="frame" x="50" y="552.33333333333337" width="293" height="34"/>
+                                <rect key="frame" x="50" y="449.33333333333331" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -106,7 +106,7 @@
                                 <color key="tintColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaV-wF-vU7" customClass="CustomButton" customModule="SnipApp25" customModuleProvider="target">
-                                <rect key="frame" x="50" y="626.33333333333337" width="293" height="35"/>
+                                <rect key="frame" x="50" y="523.33333333333337" width="293" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="293" id="2M6-lg-Xa0"/>
                                 </constraints>
@@ -120,11 +120,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RYL-HB-xfa">
-                                <rect key="frame" x="75" y="104" width="243" height="223"/>
+                                <rect key="frame" x="75" y="1" width="243" height="223"/>
                                 <color key="tintColor" red="0.20000001789999999" green="0.32549020649999999" blue="0.42745098469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWz-VW-4wM">
-                                <rect key="frame" x="226" y="690" width="160" height="35"/>
+                                <rect key="frame" x="226" y="587" width="160" height="35"/>
                                 <color key="tintColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?"/>
@@ -168,33 +168,33 @@
             </objects>
             <point key="canvasLocation" x="1832.824427480916" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password View Controller-->
         <scene sceneID="JyZ-rA-z7M">
             <objects>
-                <viewController id="ojD-d6-K9l" customClass="ViewController" customModule="SnipApp25" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ojD-d6-K9l" customClass="ForgotPasswordViewController" customModule="SnipApp25" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKk-b9-2l4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Your Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhZ-SF-L0A">
-                                <rect key="frame" x="91" y="371" width="216" height="27"/>
+                                <rect key="frame" x="91" y="395" width="216" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbg-OF-8jf">
-                                <rect key="frame" x="66" y="415" width="88" height="22"/>
+                                <rect key="frame" x="66" y="439" width="88" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="       Your Gmail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtz-1v-3d5">
-                                <rect key="frame" x="50" y="445" width="293" height="34"/>
+                                <rect key="frame" x="50" y="469" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-nI-CB1" customClass="CustomButton" customModule="SnipApp25" customModuleProvider="target">
-                                <rect key="frame" x="50" y="531" width="293" height="35"/>
+                                <rect key="frame" x="50" y="555" width="293" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="293" id="TmK-LN-U0N"/>
                                 </constraints>
@@ -208,7 +208,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apv-pV-Pc9">
-                                <rect key="frame" x="50" y="607" width="141" height="35"/>
+                                <rect key="frame" x="50" y="631" width="141" height="35"/>
                                 <color key="tintColor" red="0.20000001789999999" green="0.32549020649999999" blue="0.42745098469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Return to LogIn"/>
@@ -217,11 +217,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zlC-aC-oEz">
-                                <rect key="frame" x="75" y="104" width="243" height="215"/>
+                                <rect key="frame" x="75" y="1" width="243" height="342"/>
                                 <color key="tintColor" red="0.20000001789999999" green="0.32549020649999999" blue="0.42745098469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hRU-yK-mSL">
-                                <rect key="frame" x="55.000000000000007" y="454.33333333333331" width="24.333333333333336" height="16.333333333333314"/>
+                                <rect key="frame" x="55.000000000000007" y="478.33333333333331" width="24.333333333333336" height="16.333333333333314"/>
                                 <color key="tintColor" red="0.4352940917" green="0.67058825489999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
@@ -276,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Wuc-Jy-Bmx">
             <objects>
-                <viewController id="Wao-9V-tDV" customClass="ViewController" customModule="SnipApp25" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wao-9V-tDV" customClass="RegisterViewController" customModule="SnipApp25" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wJO-Pr-HXW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -419,7 +419,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dBI-vY-ljI"/>
+        <segue reference="iMH-rh-veg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="envelope" catalog="system" width="128" height="85"/>
