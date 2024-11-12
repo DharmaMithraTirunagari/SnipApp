@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
  
@@ -39,7 +37,7 @@ class ViewController: UIViewController {
             for button in buttons {
                 button?.backgroundColor = .white
                 button?.setTitleColor(.black, for: .normal)
-                button?.layer.cornerRadius = 20
+                button?.layer.cornerRadius = 40
                 button?.layer.shadowColor = UIColor.black.cgColor
                 button?.layer.shadowOpacity = 0.2
                 button?.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -49,22 +47,22 @@ class ViewController: UIViewController {
         }
         
         // Helper function to style buttons
-    func addGradientBackground() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [
-            UIColor(red: 0.2, green: 0.6, blue: 0.8, alpha: 1.0).cgColor,
-            UIColor(red: 0.1, green: 0.3, blue: 0.5, alpha: 1.0).cgColor
-        ]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-        gradientLayer.frame = view.bounds
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
+//    func addGradientBackground() {
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.colors = [
+//            UIColor(red: 0.2, green: 0.6, blue: 0.8, alpha: 1.0).cgColor,
+//            UIColor(red: 0.1, green: 0.3, blue: 0.5, alpha: 1.0).cgColor
+//        ]
+//        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+//        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+//        gradientLayer.frame = view.bounds
+//        view.layer.insertSublayer(gradientLayer, at: 0)
+//    }
     func animateButtons() {
         let buttons = [loginButton, registerButton]
         for button in buttons {
             button?.alpha = 0
-            UIView.animate(withDuration: 1.0, delay: 0.2, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 2.0, delay: 0.2, options: .curveEaseIn, animations: {
                 button?.alpha = 1
             })
         }

@@ -1,14 +1,15 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  SnipApp25
 //
-//  Created by Srikanth Kyatham on 11/11/24.
+//  Created by Srikanth Kyatham on 11/12/24.
 //
 
 import Foundation
+import Foundation
 import UIKit
 
-class LoginViewController : UIViewController {
+class RegisterViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
