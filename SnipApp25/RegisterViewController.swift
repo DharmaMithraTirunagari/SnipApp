@@ -11,6 +11,13 @@ import UIKit
 
 class RegisterViewController : UIViewController {
     
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        if let safeValue = loginViewController {
+            self.navigationController?.pushViewController(safeValue, animated: true)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
