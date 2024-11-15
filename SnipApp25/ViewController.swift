@@ -12,7 +12,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
  
-
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
+//        if let safeValue = registerViewController {
+//            self.navigationController?.pushViewController(safeValue, animated: true)
+//        }
+        guard let safeValue = registerViewController else { return  }
+        self.navigationController?.pushViewController(safeValue, animated: true)
+        
+    }
+    
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        if let safeValue = loginViewController {
+            self.navigationController?.pushViewController(safeValue, animated: true)
+        }
+    }
+    
     @IBAction func buttonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, animations: {
                 sender.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
@@ -27,6 +46,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         styleButtons()
         addGradientBackground()
         animateButtons()
