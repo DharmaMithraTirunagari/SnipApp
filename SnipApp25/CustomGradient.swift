@@ -26,3 +26,13 @@ extension UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+
+extension UIViewController {
+    func navigateTo<T: UIViewController>(type: T.Type, withIdentifier identifier: String, animated: Bool = true) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: identifier) as? T else {
+            print("Could not instantiate view controller with identifier \(identifier)")
+            return
+        }
+        self.navigationController?.pushViewController(viewController, animated: animated)
+    }
+}

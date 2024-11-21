@@ -13,23 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
  
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
-//        if let safeValue = registerViewController {
-//            self.navigationController?.pushViewController(safeValue, animated: true)
-//        }
-        guard let safeValue = registerViewController else { return  }
-        self.navigationController?.pushViewController(safeValue, animated: true)
+//        let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
+        navigateTo(type: RegisterViewController.self, withIdentifier: "RegisterViewController", animated: true)
         
     }
     
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        
-        
-        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
-        if let safeValue = loginViewController {
-            self.navigationController?.pushViewController(safeValue, animated: true)
-        }
+        navigateTo(type: LoginViewController.self, withIdentifier: "LoginViewController", animated: true)
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {

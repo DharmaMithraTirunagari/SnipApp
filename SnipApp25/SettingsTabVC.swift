@@ -52,6 +52,13 @@ class SettingsTabVC: UIViewController {
             }
     }
     
+    @IBAction func logoutPressed(_ sender: UIButton) {
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        if let safeValue = loginViewController {
+            self.navigationController?.pushViewController(safeValue, animated: true)
+        }
+    }
+    
     
 
 }

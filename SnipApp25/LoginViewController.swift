@@ -10,13 +10,9 @@ import UIKit
 
 class LoginViewController : UIViewController {
     
-//    @IBAction func submitButtonPressed(_ sender: UIButton) {
-//        let welcomeViewController = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController
-//        if let safeValue = welcomeViewController {
-//            self.navigationController?.pushViewController(safeValue, animated: true)
-//        }
-//    }
+    @IBOutlet weak var usernameTextField: UITextField!
     
+    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
         let forgotPasswordViewController = self.storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController
@@ -30,5 +26,21 @@ class LoginViewController : UIViewController {
         //styleButtons()
         addGradientBackground()
         //animateButtons()
+    }
+    
+    @IBAction func submitPressed(_ sender: UIButton) {
+        if let username = usernameTextField.text, let password = passwordTextField.text {
+            if username == "Dharma" && password == "Tirunagari" {
+                navigateToAuthenticateVC(name: username)
+            } else{
+                
+            }
+        }
+    }
+    func navigateToAuthenticateVC(name: String){
+        guard let authenticateVC = self.storyboard?.instantiateViewController(withIdentifier: "Authenticate") as? Authenticate else { return }
+        
+        authenticateVC.recievedData = "Welcome \(name), you are logged in successfully"
+        self.navigationController?.pushViewController(authenticateVC, animated: true)
     }
 }
