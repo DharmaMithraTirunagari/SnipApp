@@ -35,7 +35,7 @@ class WelcomeViewController : UIViewController {
     
     func setupFeaturedDesigns() {
         let featuredDesigns = [
-            (title: "Eco-Friendly Bag", imageName: "EcoFriendlyBag"),
+            (title: "Eco-Friendly Bag", imageName: "EcoFriendlybag"),
             (title: "Upcycled Jeans", imageName: "upcyclingJeans"),
             (title: "Recycled Jewelry", imageName: "recycledJewel"),
             (title: "Repurposed Glass Bottle", imageName: "glassbottles")

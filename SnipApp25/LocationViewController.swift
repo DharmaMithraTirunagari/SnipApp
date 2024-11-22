@@ -24,23 +24,27 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        addGradientBackground()
+        tableView.backgroundColor = UIColor.systemGroupedBackground
+        
         tableView.dataSource = self
         tableView.delegate = self
-                
+        tableView.register(UINib(nibName: "LocationCell", bundle: nil), forCellReuseIdentifier: "LocationCell")
                 // Register a basic UITableViewCell
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LocationCell")
+        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LocationCell")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
         let location = locations[indexPath.row]
-        cell.textLabel?.text = location["name"]
-        cell.detailTextLabel?.text = location["address"]
-        cell.accessoryType = .disclosureIndicator
+        cell.shopNameLabel.text = location["name"]
+        cell.shopAddressLabel.text = location["address"]
+        cell.shopImageView.image = UIImage(systemName: "map")
+        cell.shopNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        cell.shopAddressLabel.font = UIFont.systemFont(ofSize: 14)
+        cell.shopAddressLabel.textColor = UIColor.darkGray
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -58,5 +62,8 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 
 }
